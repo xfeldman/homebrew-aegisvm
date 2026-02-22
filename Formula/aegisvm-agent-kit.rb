@@ -25,17 +25,6 @@ class AegisvmAgentKit < Formula
     cp "agent.json", prefix/"share/aegisvm/kits/agent.json"
   end
 
-  def post_install
-    # Link kit manifest to user's aegis config
-    kits_dir = Pathname.new(ENV["HOME"])/".aegis/kits"
-    kits_dir.mkpath
-    target = kits_dir/"agent.json"
-    source = prefix/"share/aegisvm/kits/agent.json"
-    # Symlink so brew upgrade/uninstall keeps it in sync
-    target.unlink if target.exist? || target.symlink?
-    FileUtils.ln_sf(source, target)
-  end
-
   def caveats
     <<~EOS
       Agent Kit installed. To use:
