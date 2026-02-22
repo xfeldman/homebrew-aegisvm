@@ -26,10 +26,14 @@ class AegisvmAgentKit < Formula
   end
 
   def post_install
-    # Install kit manifest to user's aegis config
-    kits_dir = Pathname.new(Dir.home)/".aegis/kits"
+    # Link kit manifest to user's aegis config
+    kits_dir = Pathname.new(ENV["HOME"])/".aegis/kits"
     kits_dir.mkpath
-    cp prefix/"share/aegisvm/kits/agent.json", kits_dir/"agent.json"
+    target = kits_dir/"agent.json"
+    source = prefix/"share/aegisvm/kits/agent.json"
+    # Symlink so brew upgrade/uninstall keeps it in sync
+    target.unlink if target.exist? || target.symlink?
+    FileUtils.ln_sf(source, target)
   end
 
   def caveats
