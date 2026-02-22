@@ -25,6 +25,11 @@ class AegisvmAgentKit < Formula
     cp "agent.json", prefix/"share/aegisvm/kits/agent.json"
   end
 
+  def post_install
+    system "mkdir", "-p", "#{ENV["HOME"]}/.aegis/kits"
+    system "cp", prefix/"share/aegisvm/kits/agent.json", "#{ENV["HOME"]}/.aegis/kits/agent.json"
+  end
+
   def caveats
     <<~EOS
       Agent Kit installed. To use:
