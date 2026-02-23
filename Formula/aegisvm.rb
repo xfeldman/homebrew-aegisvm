@@ -21,6 +21,7 @@ class Aegisvm < Formula
     bin.install "aegis"
     bin.install "aegisd"
     bin.install "aegis-mcp"
+    bin.install "aegis-mcp-guest"
     bin.install "aegis-vmm-worker"
     bin.install "aegis-harness"
 
