@@ -7,9 +7,9 @@
 class AegisvmAgentKit < Formula
   desc "AegisVM Agent Kit — messaging-driven LLM agent with Telegram integration"
   homepage "https://github.com/xfeldman/aegisvm"
-  url "https://github.com/xfeldman/aegisvm/releases/download/v0.4.2/aegisvm-agent-kit-v0.4.2-darwin-arm64.tar.gz"
-  sha256 "b013fde5c51dc6f3f80cc00670949abdd8440101ef7b4a48d771ff899172bf07"
-  version "0.4.2"
+  url "https://github.com/xfeldman/aegisvm/releases/download/v0.4.3/aegisvm-agent-kit-v0.4.3-darwin-arm64.tar.gz"
+  sha256 "f9d7f6ca118bc0d35ea1388b4556f0dd1611fd8f725b692358108aa15098fa6e"
+  version "0.4.3"
   license "Apache-2.0"
 
   depends_on "xfeldman/aegisvm/aegisvm"
