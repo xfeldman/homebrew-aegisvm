@@ -8,9 +8,9 @@
 class Aegisvm < Formula
   desc "Lightweight microVM sandbox runtime for agents"
   homepage "https://github.com/xfeldman/aegisvm"
-  url "https://github.com/xfeldman/aegisvm/releases/download/v0.5.11/aegisvm-v0.5.11-darwin-arm64.tar.gz"
-  sha256 "38585af1386eeb32b833be0cae516132e88ff1a6a9e3fa7667935b1ae4c28c0b"
-  version "0.5.11"
+  url "https://github.com/xfeldman/aegisvm/releases/download/v0.5.12/aegisvm-v0.5.12-darwin-arm64.tar.gz"
+  sha256 "3dc3a73f72d7f19cb8a4e8ae8367da23bfe1171d208cc82aa34c6c2b2bcbad9e"
+  version "0.5.12"
   license "Apache-2.0"
 
   depends_on "slp/krun/libkrun"
